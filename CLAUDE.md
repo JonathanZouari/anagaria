@@ -21,6 +21,8 @@ python -m pytest test_model.py -k overlap             # single test
 2. After executing, run the full test suite (`python -m pytest test_model.py`) and check for regressions — all previously passing tests must still pass.
 3. Run the security review skill (`/security-review`) on the updated code.
 
+A project `Stop` hook (`.claude/hooks/obsidian_log.py`) appends each turn's prompt, edited files and tool usage to the Obsidian note `ANAGARIA/05 - Work Log.md` (vault path from `OBSIDIAN_VAULT`, defaulting to `C:\Users\User\Dropbox\Obsidian\Projects`). Project docs live in the same vault folder.
+
 ## Architecture
 
 Data flows one way: **design dict → parts → (figure | cut list | price)**.
